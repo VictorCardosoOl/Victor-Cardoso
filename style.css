@@ -29,17 +29,17 @@
   }
   #profile {
     text-align: center;
-    padding: 26px;
+    padding: 15px;
     
   }
   #profile img {
-    width: 180px;
+    width: 170px;
     animation: profile_animate 4s ease-in-out infinite 0s;
     
   }
   .nome{
     font-family: "DM Serif Text", serif;
-    font-size: 2.2rem;
+    font-size: 2.15rem;
     font-weight: 700;
     padding: 0.5rem;
   }
