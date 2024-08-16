@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    --text-color: white;
+    --bg-url: url(./assets/b\ \(4\).jpg);
+    --stroke-color: rgba(255, 255, 255, 0.5);
+    --surface-color: rgba(255, 255, 255, 0.1);
+    --surface-color-hover: rgba(255, 255, 255, 0.15);
+    --switch-bg-url: url(./assets/moon-stars.svg);
+  }
+
+
+  body {
+    height: 100vh;
+    background: var(--bg-url) no-repeat top center/cover;
+  }
+  body * {
+    font-family: "Inter", sans-serif;
+    color: var(--text-color);
+  }
+  #container {
+    width: 100%;
+    max-width: 550px;
+    margin: 20px auto 0px;
+    padding: 0 18px;
+  }
+  #profile {
+    text-align: center;
+    padding: 26px;
+    
+  }
+  #profile img {
+    width: 180px;
+    animation: profile_animate 4s ease-in-out infinite 0s;
+    
+  }
+  .nome{
+    font-family: "DM Serif Text", serif;
+    font-size: 2.6rem;
+    padding: 0.5rem;
+  }
+ 
+  ul {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    gap: 8px;
+    padding: 5px 0;
+  }
+  ul li a {
+    display: flex;
+    border-radius: 50px;
+    border: 1px solid var(--stroke-color);
+    background: var(--surface-color);
+    backdrop-filter: blur(15px);
+    justify-content: center;
+    align-items: center;
+    padding: 16px 18px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 300;
+    transition: background 0.5s;
+  }
+  ul li a:hover {
+    border: 1.5px solid var(--text-color);
+    background: var(--surface-color-hover);
+  }
+  #social-links {
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+  }
+  #social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    transition: background 1s, transform 1s;
+    border-radius: 50%;
+  }
+  #social-links a:hover {
+    background: var(--surface-color-hover);
+    transform: translateY(-10px);
+  }
+
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center; 
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+   
+  }
+  .footer-content {
+    display: flex;
+    justify-content: center; 
+  }
+
+  @media (min-width: 700px) {
+    :root {
+      --bg-url: url(./assets/desk.jpg);
+    }
+  }
+  @keyframes slide-in {
+    from {
+      left: 0;
+    }
+    to {
+      left: 50%;
+    }
+  }
+  @keyframes slide-back {
+    from {
+      right: 0;
+    }
+    to {
+      right: 50%;
+    }
+  }
+  @keyframes profile_animate{
+    0%{
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+    50%{
+      border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100%{
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+  }
+  
